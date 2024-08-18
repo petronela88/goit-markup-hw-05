@@ -673,3 +673,73 @@ address {
     max-width: 1440px;
 }
 
+/* Footer Formular */
+.subscribe-form-footer-container {
+    margin-left: 80px;
+    width: 453px;
+    height: 80px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.subscribe-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.input-subscribe {
+    background-color: transparent;
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    box-shadow:
+        0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding-left: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.input-subscribe::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.footer-btn {
+    min-width: 165px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--iris);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    position: relative;
+    color: var(--white);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-btn-icon {
+    fill: var(--white);
+    margin: 16px;
+}
