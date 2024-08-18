@@ -743,3 +743,242 @@ address {
     fill: var(--white);
     margin: 16px;
 }
+
+/* Modal */
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(46, 47, 66, 0.4);
+    ;
+    visibility: hidden;
+    z-index: 999;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    visibility: initial;
+}
+
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 408px;
+    min-height: 584px;
+}
+
+.button-close {
+    padding: 0;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cornflower);
+    cursor: pointer;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close:hover .button-close:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.button-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close:hover .button-close-icon,
+.button-close:focus .button-close-icon {
+    fill: var(--white);
+}
+
+/* Stilizarea Formularului */
+
+.modal-container {
+    padding: 72px 24px 24px 24px;
+    border: none;
+    border-radius: 4px;
+    background: #fcfcfc;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2E2F42;
+    margin-bottom: 16px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+}
+
+.input-form {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 8px;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+    border-color: #4D5AE5;
+}
+
+.form-label:hover svg,
+.form-label:focus svg,
+.form-label:active svg {
+    fill: var(--iris);
+}
+
+.input-icon {
+    fill: var(--navy-blue);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 16px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-icon:focus+svg {
+    fill: var(--iris);
+}
+
+.comment-form-container {
+    margin-bottom: 16px;
+}
+
+.comment-form {
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-form:hover,
+.comment-form:focus,
+.comment-form:active {
+    border-color: #4D5AE5;
+}
+
+.form-checkbox-container {
+    margin-bottom: 24px;
+}
+
+.checkbox-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    ;
+}
+
+.checkbox-span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+.form-checkbox:checked+.checkbox-text .checkbox-span {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.policy {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #4d5ae5;
+}
+
+.submit-button {
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--iris);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    box-shadow:
+        0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: var(--ocean);
+}
